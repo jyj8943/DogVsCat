@@ -13,6 +13,8 @@ public class Cat : MonoBehaviour
 
     private float full = 5.0f;
     private float energy = 0.0f;
+
+    private bool isFull = false;
     
     void Start()
     {
@@ -55,11 +57,17 @@ public class Cat : MonoBehaviour
                 energy += 1f;
                 front.localScale = new Vector3(energy / full, 1f, 1f);
                 Destroy(collision.gameObject);
+                
                 if (energy == full)
                 {
-                    hungryCat.SetActive(false);
-                    fullCat.SetActive(true);
-                    Destroy(gameObject, 3f);
+                    if (!isFull)
+                    {
+                        isFull = true;
+                        hungryCat.SetActive(false);
+                        fullCat.SetActive(true);
+                        Destroy(gameObject, 3f);
+                        GameManager.instance.AddScore();
+                    }
                 }
             }
         }
