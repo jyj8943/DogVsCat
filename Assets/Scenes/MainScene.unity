@@ -1016,6 +1016,7 @@ MonoBehaviour:
   normalCat: {fileID: 6948333260537355425, guid: fffb35367e02d04488250c424165d878, type: 3}
   retryBtn: {fileID: 458302119}
   fatCat: {fileID: 8618188432537887200, guid: f518cc656ce03cc47b137335c8e62933, type: 3}
+  pirateCat: {fileID: 3484781558301593546, guid: 8103c66a802879342b2c5f97b4095bae, type: 3}
   levelTxt: {fileID: 99641417}
   levelFront: {fileID: 1071969012}
 --- !u!4 &1340738678

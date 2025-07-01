@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject normalCat;
     public GameObject retryBtn;
     public GameObject fatCat;
+    public GameObject pirateCat;
 
     public Text levelTxt;
     public RectTransform levelFront;
@@ -60,6 +61,13 @@ public class GameManager : MonoBehaviour
         else if (level == 3)
         {
             Instantiate(fatCat);
+        }
+        else if (level == 4)
+        {
+            int p = Random.Range(0, 10);
+            if (p < 5) Instantiate(pirateCat);
+            Instantiate(fatCat);
+            Instantiate(normalCat);
         }
     }
 
