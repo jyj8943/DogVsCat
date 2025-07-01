@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     
     public GameObject normalCat;
     public GameObject retryBtn;
+    public GameObject fatCat;
 
     public Text levelTxt;
     public RectTransform levelFront;
@@ -41,6 +43,24 @@ public class GameManager : MonoBehaviour
     private void MakeCat()
     {
         Instantiate(normalCat);
+        
+        // lv.1 20%의 확률로 고양이를 더 생성
+        if (level == 1)
+        {
+            int p = Random.Range(0, 10);
+            if (p < 2) Instantiate(normalCat);
+        }
+        // lv.2 50%의 확률로 고양이를 더 생성
+        else if (level == 2)
+        {
+            int p = Random.Range(0, 10);
+            if (p < 5) Instantiate(normalCat);
+        }
+        // lv.3 뚱뚱한 고양이를 생성
+        else if (level == 3)
+        {
+            Instantiate(fatCat);
+        }
     }
 
     public void GameOver()

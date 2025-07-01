@@ -13,7 +13,10 @@ public class Cat : MonoBehaviour
 
     private float full = 5.0f;
     private float energy = 0.0f;
+    private float speed = 0.05f;
 
+    public int type;
+    
     private bool isFull = false;
     
     void Start()
@@ -21,13 +24,24 @@ public class Cat : MonoBehaviour
         float x = Random.Range(-9.0f, 9.0f);
         float y = 30.0f;
         transform.position = new Vector2(x, y);
+
+        if (type == 1)
+        {
+            speed = 0.05f;
+            full = 5f;
+        }
+        else if (type == 2)
+        {
+            speed = 0.02f;
+            full = 10f;
+        }
     }
 
     void Update()
     {
         if (energy < full)
         {
-            transform.position += Vector3.down * 0.05f;
+            transform.position += Vector3.down * speed;
 
             if (transform.position.y < -16f)
             {
