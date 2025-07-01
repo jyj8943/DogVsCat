@@ -225,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057334271}
   - component: {fileID: 1057334270}
+  - component: {fileID: 1057334272}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -299,6 +300,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1057334272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057334269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9598faddfe706458c90cd458863ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food: {fileID: 3997123828546162928, guid: 4a41dc5ae06dbae449079ada23812799, type: 3}
 --- !u!1 &1999248818
 GameObject:
   m_ObjectHideFlags: 0
